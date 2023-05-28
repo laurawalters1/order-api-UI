@@ -1,7 +1,8 @@
 import React, {useState} from 'react'
-
+import { DataState } from '../../context/DataProvider';
 export default function OrderForm() {
     const [body, setBody] = useState({ count: 0});
+    const {data, setData} = DataState()
 
     const handleUserInput = (event) => {
         const { name, value } = event.target;
@@ -20,15 +21,18 @@ export default function OrderForm() {
             
         });
         response.json().then(data=>{
-            console.log(data)
+            setData(data)
         })
         // console.log(json.json())
       }
+      if(!data){
   return (
-    <form action="" onSubmit={getPackNumber} className='d-flex flex-column w-25 align-items-center'>
+    <form action="" onSubmit={getPackNumber} className='d-flex flex-column w-25 align-items-center '>
         <label htmlFor="orderNumber">How many items would you like to order?</label>
-        <input type="number" onChange={handleUserInput} name='count' className='w-100' />
+        <input type="number" onChange={handleUserInput} name='count' className='w-100 my-4' />
         <button className='btn btn-light' type='submit'>Submit</button>
     </form>
+      
   )
+      }
 }
