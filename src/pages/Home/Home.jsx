@@ -10,8 +10,20 @@ export default function Home() {
     <div className='h-100'>
         <div className='d-flex h-75 justify-content-center align-items-center'>
 
-        <OrderForm></OrderForm>
-        <ResultCard></ResultCard>
+        <div className='container'>
+            <div className='row'>
+                <div className='col-2 col-md-4'></div>
+                <OrderForm></OrderForm>
+                <div className='col-2 col-md-4'></div>
+            </div>
+
+            <div className='row'>
+                <div className='col-2 col-md-4'></div>
+                <ResultCard></ResultCard>
+                <div className='col-2 col-md-4'></div>
+            </div>
+        </div>
+        
 
         </div>
     </div>

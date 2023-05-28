@@ -10,8 +10,8 @@ export default function ResultCard() {
     if(data){
         const keys = Object.keys(data)
   return (
-    <div>
-        <div class="card">
+    <div className='d-flex flex-column justify-content-center align-items-center'>
+        <div class="card col-8 col-md-4">
   <div class="card-header">
     To meet this number, you will need to order the following packs
   </div>
