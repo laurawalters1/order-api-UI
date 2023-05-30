@@ -16,7 +16,7 @@ export default function ResultCard() {
     To meet this number, you will need to order the following packs
   </div>
   <ul class="list-group list-group-flush">
-      { keys.map((key)=> data[key] > 0 && <li class="list-group-item">{key} x {data[key]}</li>)}
+      { keys.map((key)=> data[key] > 0 && <li class="list-group-item">{data[key]} x {key}</li>)}
 
   </ul>
 </div>
